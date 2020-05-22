@@ -1,3 +1,115 @@
-.alert-error {
-  color: red;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+body{
+  font-family: "Roboto", Helvetica, sans-serif;
+  margin: 0 15%;
+  font-size: 1.3rem;
+  background:white;
+}
+#root,#countHeader{
+  margin-bottom: 5% ;
+}
+#root,.contributorsContainer,.repoDetail{
+  display: flex;
+  flex-direction: column;
+}
+.mainContainer,.contributorsDetail,header{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.contributorsContainer,.alert-error,header,.contributorsDetail,select,.repoDetail,#hyf-header{
+  padding: 2%;
+}
+
+.mainContainer section{
+  flex: 0 50%;
+  margin: 1%;
+}
+.contributorsContainer,.repoDetail{
+  border-radius: 5px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5), 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.contributorsDetail{
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 1%;
+}
+.contributorsDetail p{
+  margin: 0 2%;
+}
+#countHeader{
+  color: rgb(124, 116, 116);
+}
+select{
+	font-size: 15px;
+	color: #444;
+	border: 1px solid #aaa;
+	border-radius: .5em;
+	background-color: white;
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+  cursor: pointer;
+  margin: auto 5%;
+}
+#contributionCount{
+  background-color: rgb(124, 116, 116);
+  color: rgb(255, 255, 255);
+  border-radius: 10%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alert-error {
+  color: rgb(167, 57, 92);
+  background-color: rgb(254, 212, 217);
+  margin: 1%;
+  height: 200%;
+  text-align: center;
+}
+header{
+  color: rgb(255, 255, 255);
+  background-color: rgb(75, 70,185);
+}
+.repoDetail p:nth-child(odd){
+  font-weight: bold;
+  color: rgb(75, 70,185);
+}
+.repoDetail p{
+  margin: 1% 4%;
+  padding: 1% 0;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.2);
+}
+
+
+@media screen and (max-width:767px){
+  body{
+    margin: 0;
+    font-size: 1rem;
+  }
+  header,.mainContainer,.repoDetail {
+    display: flex;
+    flex-direction: column;
+  }
+  section{
+    margin: 2%;
+  }
+  .repoDetail p{
+    padding: 2%;
+  }
+  .repoDetail p:nth-child(even){
+    margin-bottom: 2%;
+    color: rgb(255, 255, 255);
+    background-color: rgba(183, 181, 228, 0.815);
+  }
+  select{
+    margin: 4% 0;
+  }
+} 

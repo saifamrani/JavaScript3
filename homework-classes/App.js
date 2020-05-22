@@ -39,13 +39,13 @@
       const header = createAndAppend('header', root, { class: 'header' });
       const error = createAndAppend('div', root);
       const main = createAndAppend('main', root, {
-        class: 'main-container',
+        class: 'mainContainer',
       });
       const repo = createAndAppend('section', main, {
-        class: 'repo-container whiteframe',
+        class: 'repoContainer whiteframe',
       });
       const contributors = createAndAppend('section', main, {
-        class: 'contributors-container whiteframe',
+        class: 'contributorsContainer whiteframe',
       });
       return { header, error, main, repo, contributors };
     }
